@@ -1,23 +1,32 @@
 {
-    "dev": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-prenotationsys-dev-102618-authRole",
-            "UnauthRoleArn": "arn:aws:iam::845246790625:role/amplify-prenotationsys-dev-102618-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::845246790625:role/amplify-prenotationsys-dev-102618-authRole",
-            "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-prenotationsys-dev-102618-deployment",
-            "UnauthRoleName": "amplify-prenotationsys-dev-102618-unauthRole",
-            "StackName": "amplify-prenotationsys-dev-102618",
-            "StackId": "arn:aws:cloudformation:us-east-1:845246790625:stack/amplify-prenotationsys-dev-102618/1fde75a0-0a35-11ec-868d-12717722e021",
-            "AmplifyAppId": "dmgoayf2el9mx"
-        },
-        "categories": {
-            "hosting": {
-                "amplifyhosting": {
-                    "appId": "dmgoayf2el9mx",
-                    "type": "cicd"
-                }
-            }
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-prenotationsys-dev-102618-authRole",
+      "UnauthRoleArn": "arn:aws:iam::845246790625:role/amplify-prenotationsys-dev-102618-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::845246790625:role/amplify-prenotationsys-dev-102618-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-prenotationsys-dev-102618-deployment",
+      "UnauthRoleName": "amplify-prenotationsys-dev-102618-unauthRole",
+      "StackName": "amplify-prenotationsys-dev-102618",
+      "StackId": "arn:aws:cloudformation:us-east-1:845246790625:stack/amplify-prenotationsys-dev-102618/1fde75a0-0a35-11ec-868d-12717722e021",
+      "AmplifyAppId": "dmgoayf2el9mx"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dmgoayf2el9mx",
+          "type": "cicd"
         }
+      },
+      "auth": {
+        "cognito8d73dfca": {}
+      },
+      "function": {
+        "utentifunction": {
+          "deploymentBucketName": "amplify-prenotationsys-dev-102618-deployment",
+          "s3Key": "amplify-builds/utentifunction-69686a2b785470466152-build.zip"
+        }
+      }
     }
+  }
 }
