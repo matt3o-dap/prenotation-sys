@@ -1,11 +1,21 @@
-import logo from './logo.svg';
+import React, {useEffect} from 'react';
+import Amplify, {API} from 'aws-amplify';
+import config from './aws-exports';
 import './App.css';
 
+Amplify.configure(config);
+
 function App() {
+
+
+  useEffect(() => {
+    API.get('prenotationApi', '/utenti/nome')
+    .then(petRes => console.log(petRes));
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Hello by matteo
         </p>

@@ -18,13 +18,10 @@
           "type": "cicd"
         }
       },
-      "auth": {
-        "cognito8d73dfca": {}
-      },
       "function": {
-        "utentifunction": {
+        "utentiFunction": {
           "deploymentBucketName": "amplify-prenotationsys-dev-102618-deployment",
-          "s3Key": "amplify-builds/utentifunction-69686a2b785470466152-build.zip"
+          "s3Key": "amplify-builds/utentiFunction-69686a2b785470466152-build.zip"
         }
       }
     }
