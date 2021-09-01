@@ -21,8 +21,11 @@
       "function": {
         "utentiFunction": {
           "deploymentBucketName": "amplify-prenotationsys-dev-102618-deployment",
-          "s3Key": "amplify-builds/utentiFunction-69686a2b785470466152-build.zip"
+          "s3Key": "amplify-builds/utentiFunction-47755268707534734857-build.zip"
         }
+      },
+      "auth": {
+        "prenotationsyscbf3b484": {}
       }
     }
   }

@@ -1,0 +1,7 @@
+{
+    "tableName": "prenotationDB",
+    "partitionKeyName": "nome",
+    "partitionKeyType": "S",
+    "sortKeyName": "cognome",
+    "sortKeyType": "S"
+}

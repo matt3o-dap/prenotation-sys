@@ -9,24 +9,31 @@ function App() {
 
 
   useEffect(() => {
-    API.get('prenotationApi', '/utenti/nome')
-    .then(petRes => console.log(petRes));
+    API.get('apiPrenotationSys', '/utenti/nome').then((petRes) => console.log(petRes));
   }, [])
 
+  const addUser = () => {
+      API.post('apiPrenotationSys', '/utenti/nome', {
+        body: {
+          nome: 'Teo',
+          cognome: 'Dapo'
+        },
+      }).then(() => {
+          console.log("Add success!")
+      });
+  };
+
   return (
+
+    
     <div className="App">
       <header className="App-header">
         <p>
           Hello by matteo
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={addUser}>
+          Add
+        </button>
       </header>
     </div>
   );
