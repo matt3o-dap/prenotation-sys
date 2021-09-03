@@ -47,6 +47,11 @@
                   {
                       "AttributeName": "cognome",
                       "AttributeType": "S"
+                  }  , 
+
+                  {
+                    "AttributeName": "prenotation_pin",
+                    "AttributeType": "S"
                   } 
                   
                 ],

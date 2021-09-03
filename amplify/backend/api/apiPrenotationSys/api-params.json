@@ -1,35 +1,43 @@
 {
-  "paths": [
-    {
-      "name": "/utenti",
-      "lambdaFunction": "utentiFunction",
-      "privacy": {
-        "open": true
-      },
-      "policyResourceName": "/utenti"
-    }
-  ],
-  "resourceName": "apiPrenotationSys",
-  "apiName": "apiPrenotationSys",
-  "functionArns": [
-    {
-      "lambdaFunction": "utentiFunction"
-    }
-  ],
-  "privacy": {
-    "auth": 0,
-    "unauth": 0,
-    "authRoleName": "amplify-prenotationsys-dev-102618-authRole",
-    "unAuthRoleName": "amplify-prenotationsys-dev-102618-unauthRole"
-  },
-  "dependsOn": [
-    {
-      "category": "function",
-      "resourceName": "utentiFunction",
-      "attributes": [
-        "Name",
-        "Arn"
-      ]
-    }
-  ]
+    "paths": [
+        {
+            "name": "/utenti",
+            "lambdaFunction": "utentiFunction",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            },
+            "policyResourceName": "/utenti"
+        }
+    ],
+    "resourceName": "apiPrenotationSys",
+    "apiName": "apiPrenotationSys",
+    "functionArns": [
+        {
+            "lambdaFunction": "utentiFunction"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "amplify-prenotationsys-dev-102618-authRole",
+        "unAuthRoleName": "amplify-prenotationsys-dev-102618-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "utentiFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "622ad73e"
 }
