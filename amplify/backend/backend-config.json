@@ -6,33 +6,8 @@
       "lastPushTimeStamp": "2021-08-31T09:05:28.670Z"
     }
   },
-  "storage": {
-    "prenotationDB": {
-      "service": "DynamoDB",
-      "providerPlugin": "awscloudformation"
-    }
-  },
-  "function": {
-    "utentiFunction": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda",
-      "dependsOn": [
-        {
-          "category": "storage",
-          "resourceName": "prenotationDB",
-          "attributes": [
-            "Name",
-            "Arn"
-          ],
-          "attributeEnvMap": {
-            "Name": "TABLE_NAME",
-            "Arn": "TABLE_ARN"
-          }
-        }
-      ]
-    }
-  },
+  "storage": {},
+  "function": {},
   "auth": {
     "prenotationsyscbf3b484": {
       "service": "Cognito",
@@ -58,19 +33,20 @@
     }
   },
   "api": {
-    "apiPrenotationSys": {
-      "service": "API Gateway",
+    "prenotationsysAPI": {
+      "service": "AppSync",
       "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "function",
-          "resourceName": "utentiFunction",
-          "attributes": [
-            "Name",
-            "Arn"
-          ]
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authprenotationsyscbf3b484"
+            }
+          },
+          "additionalAuthenticationProviders": []
         }
-      ]
+      }
     }
   }
 }

@@ -1,0 +1,7 @@
+type Utenti @model {
+  id: ID!
+  cognome: String!
+  nome: String!
+  codice_fiscale: String!
+  prenotation_pin: String!
+}
